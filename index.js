@@ -1,4 +1,4 @@
-module.exports = parse
+module.exports = Parser
 
 function Parser (options) {
   if (!(this instanceof Parser)) {
