@@ -1,10 +1,10 @@
 module.exports = Parser
 
-function Parser (options) {
+function Parser (parsers) {
   if (!(this instanceof Parser)) {
-    return new Parser(options)
+    return new Parser(parsers)
   }
-  this.parsers = options.parsers
+  this.parsers = parsers
 }
 
 Parser.prototype.parse = function (data, contentType, subjectUri) {
