@@ -8,5 +8,6 @@ function Parser (parsers) {
 }
 
 Parser.prototype.parse = function (data, contentType, subjectUri) {
-  return this.parsers[contentType].parse(data)
+  subjectUri = subjectUri || document.documentURI;
+  return this.parsers[contentType].parse(data, null, subjectUri)
 }
